@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ku-ie-validator-project</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dropdown.css">
+    <link rel="stylesheet" href="../css/upload.css">
+    <link rel="stylesheet" href="../css/hamburger.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body>
+    <div class="input-page">
+        <header>
+            <nav>
+                <div class="bar">
+                    <div class="hamburger" id="hamburgerBtn">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+                <div class="side-tab" id="sideTab">
+                    <!-- เนื้อหาเมนูที่ต้องการ -->
+                    <ul>
+                        <li><a href="#">เมนู 1</a></li>
+                        <li><a href="#">เมนู 2</a></li>
+                        <li><a href="../uploads/example.pdf" target="_blank">PDF ไฟล์</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="container">
+                <div class="title">
+                    <img width="95" src="../img/IE_logo.png" alt="">
+                    <h1>KU Industrial Engineering Course Validator</h1>
+                </div>
+
+                <div class="select">
+                    <h2>Select course catalog</h2>
+                    <div class="dropdown">
+                        <button class="dropdown-btn" id="dropdownBtn">
+                            Select course <i class="fas fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content" id="dropdownContent">
+                            <a href="#">IE-65</a>
+                            <a href="#">IE-60</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="upload">
+                    <h2>Upload PDF transcript</h2>
+                    <form id="pdfForm">
+                        <label for="pdfInput" class="pdf-label">
+                            <i class="fas fa-file-upload"></i> Choose file
+                        </label>
+                        <input type="file" id="pdfInput" accept="application/pdf" style="display:none;">
+                        <span id="fileName"></span>
+                    </form>
+                </div>
+
+                <div class="submit">
+                    <button class="submit-btn">Submit</button>
+                </div>
+
+            </div>
+        </header>
+        
+        
+    </div>
+    <div class="output-page" style="display:none;">
+        <header>
+            <nav>
+                <div class="bar">
+                    <div class="hamburger" id="hamburgerBtnOut">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+                <div class="side-tab" id="sideTabOut">
+                    <ul>
+                        <li><a href="#">เมนู 1</a></li>
+                        <li><a href="#">เมนู 2</a></li>
+                        <li><a href="../uploads/example.pdf" target="_blank">PDF ไฟล์</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="container">
+                <div class="title">
+                    <img width="95" src="../img/IE_logo.png" alt="">
+                    <h1>KU Industrial Engineering Course Validator</h1>
+                </div>
+            </div>
+            <!-- ปุ่มอยู่นอกกรอบสีขาว -->
+            <div class="output-btn-row">
+                <button class="download-btn submit-btn">Download PDF</button>
+            </div>
+            <div class="output-btn-row">
+                <button class="back-btn">Back</button>
+            </div>
+        </header>
+        <main>
+            <div class="container output-container">
+                <h2>Mapping</h2>
+                <img src="../img/mapping.png" alt="Mapping" style="width:100%;border:2px solid #444;">
+            </div>
+            <div class="output-container ie-pass-notpass-row">
+                <div class="ie-box">
+                    <h2>IE - Pass</h2>
+                    <div id="output-ie-pass"></div>
+                </div>
+                <div class="ie-box">
+                    <h2>IE - Not Pass</h2>
+                    <div id="output-ie-notpass"></div>
+                </div>
+            </div>
+            <div class="container output-container">
+                <h2>Void</h2>
+                <div id="output-void"></div>
+            </div>
+            <div class="container output-container">
+                <h2>Elective Subjects</h2>
+                <div id="output-elective-subject"></div>
+            </div>
+        </main>
+    </div>
+
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

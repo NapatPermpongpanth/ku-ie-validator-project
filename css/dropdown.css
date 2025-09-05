@@ -1,0 +1,48 @@
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 220px; /* กำหนดความกว้าง dropdown ทั้งกล่อง */
+}
+
+.dropdown-btn {
+    width: 100%;
+    background: #fff;
+    color: #222;
+    padding: 10px 20px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex; /* เพิ่ม */
+    justify-content: space-between; /* เพิ่ม */
+    align-items: center; /* เพิ่ม */
+    box-sizing: border-box; /* เพิ่ม */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 110%;
+    background: #fff;
+    width: 100%; /* ให้ dropdown-content ยาวเท่าปุ่ม */
+    min-width: unset;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    z-index: 99;
+    border-radius: 6px;
+    overflow: hidden;
+    font-family: "Montserrat", sans-serif;
+}
+
+.dropdown-content a {
+    color: #222;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+}
+
+.dropdown-content a:hover {
+    background: #f0eeee;
+}
